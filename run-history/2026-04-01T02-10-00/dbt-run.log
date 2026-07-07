@@ -1,0 +1,29 @@
+[0m02:58:49  Running with dbt=1.11.12
+[0m02:58:50  Registered adapter: duckdb=1.10.1
+[0m02:58:50  Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m02:58:53  [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `accepted_values` defined on 'raw_orders' in
+package 'sales_insights' (models/staging/sources.yml). Arguments to generic
+tests should be nested under the `arguments` property.
+[0m02:58:53  Found 2 models, 15 data tests, 1 source, 485 macros
+[0m02:58:53  
+[0m02:58:53  Concurrency: 4 threads (target='prod')
+[0m02:58:53  
+[0m02:58:53  1 of 2 START sql view model main.stg_orders .................................... [RUN]
+[0m02:58:53  1 of 2 OK created sql view model main.stg_orders ............................... [[32mOK[0m in 0.17s]
+[0m02:58:53  2 of 2 START sql table model main.mart_sales ................................... [RUN]
+[0m02:58:54  2 of 2 OK created sql table model main.mart_sales .............................. [[32mOK[0m in 0.14s]
+[0m02:58:54  
+[0m02:58:54  Finished running 1 table model, 1 view model in 0 hours 0 minutes and 0.62 seconds (0.62s).
+[0m02:58:54  
+[0m02:58:54  [32mCompleted successfully[0m
+[0m02:58:54  
+[0m02:58:54  Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m02:58:54  [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.

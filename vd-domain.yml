@@ -1,0 +1,8 @@
+name: sales-insights
+slug: sales-insights
+destination:
+  type: duckdb
+  defaultSchema: main
+dataLocation:
+  dev: ./data/sales-insights.duckdb
+  prod: /workspace/data/domains/sales-insights/domain.duckdb

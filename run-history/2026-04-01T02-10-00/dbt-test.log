@@ -1,0 +1,47 @@
+[0m02:58:58  Running with dbt=1.11.12
+[0m02:58:59  Registered adapter: duckdb=1.10.1
+[0m02:59:00  Found 2 models, 15 data tests, 1 source, 485 macros
+[0m02:59:00  
+[0m02:59:00  Concurrency: 4 threads (target='prod')
+[0m02:59:00  
+[0m02:59:00  1 of 15 START test not_null_mart_sales__dbt_invocation_id ...................... [RUN]
+[0m02:59:00  2 of 15 START test not_null_mart_sales__git_sha ................................ [RUN]
+[0m02:59:00  3 of 15 START test not_null_mart_sales__loaded_at .............................. [RUN]
+[0m02:59:00  4 of 15 START test not_null_mart_sales_order_count ............................. [RUN]
+[0m02:59:00  2 of 15 PASS not_null_mart_sales__git_sha ...................................... [[32mPASS[0m in 0.18s]
+[0m02:59:00  4 of 15 PASS not_null_mart_sales_order_count ................................... [[32mPASS[0m in 0.20s]
+[0m02:59:00  5 of 15 START test not_null_mart_sales_sales_month ............................. [RUN]
+[0m02:59:00  3 of 15 PASS not_null_mart_sales__loaded_at .................................... [[32mPASS[0m in 0.20s]
+[0m02:59:00  1 of 15 PASS not_null_mart_sales__dbt_invocation_id ............................ [[32mPASS[0m in 0.21s]
+[0m02:59:00  6 of 15 START test not_null_mart_sales_total_revenue ........................... [RUN]
+[0m02:59:00  7 of 15 START test not_null_stg_orders_amount .................................. [RUN]
+[0m02:59:00  8 of 15 START test not_null_stg_orders_order_id ................................ [RUN]
+[0m02:59:00  5 of 15 PASS not_null_mart_sales_sales_month ................................... [[32mPASS[0m in 0.11s]
+[0m02:59:00  6 of 15 PASS not_null_mart_sales_total_revenue ................................. [[32mPASS[0m in 0.09s]
+[0m02:59:01  8 of 15 PASS not_null_stg_orders_order_id ...................................... [[32mPASS[0m in 0.10s]
+[0m02:59:01  9 of 15 START test not_null_stg_orders_order_status ............................ [RUN]
+[0m02:59:01  10 of 15 START test source_accepted_values_raw_orders_order_status__shipped__delivered__returned  [RUN]
+[0m02:59:01  7 of 15 PASS not_null_stg_orders_amount ........................................ [[32mPASS[0m in 0.11s]
+[0m02:59:01  11 of 15 START test source_not_null_raw_orders_amount .......................... [RUN]
+[0m02:59:01  12 of 15 START test source_not_null_raw_orders_order_id ........................ [RUN]
+[0m02:59:01  9 of 15 PASS not_null_stg_orders_order_status .................................. [[32mPASS[0m in 0.21s]
+[0m02:59:01  13 of 15 START test source_unique_raw_orders_order_id .......................... [RUN]
+[0m02:59:01  12 of 15 PASS source_not_null_raw_orders_order_id .............................. [[32mPASS[0m in 0.10s]
+[0m02:59:01  11 of 15 PASS source_not_null_raw_orders_amount ................................ [[32mPASS[0m in 0.10s]
+[0m02:59:01  10 of 15 FAIL 1 source_accepted_values_raw_orders_order_status__shipped__delivered__returned  [[31mFAIL 1[0m in 0.23s]
+[0m02:59:01  14 of 15 START test unique_mart_sales_sales_month .............................. [RUN]
+[0m02:59:01  15 of 15 START test unique_stg_orders_order_id ................................. [RUN]
+[0m02:59:01  14 of 15 PASS unique_mart_sales_sales_month .................................... [[32mPASS[0m in 0.07s]
+[0m02:59:01  13 of 15 PASS source_unique_raw_orders_order_id ................................ [[32mPASS[0m in 0.10s]
+[0m02:59:01  15 of 15 PASS unique_stg_orders_order_id ....................................... [[32mPASS[0m in 0.08s]
+[0m02:59:01  
+[0m02:59:01  Finished running 15 data tests in 0 hours 0 minutes and 0.85 seconds (0.85s).
+[0m02:59:01  
+[0m02:59:01  [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m02:59:01  
+[0m02:59:01  [31mFailure in test source_accepted_values_raw_orders_order_status__shipped__delivered__returned (models/staging/sources.yml)[0m
+[0m02:59:01    Got 1 result, configured to fail if != 0
+[0m02:59:01  
+[0m02:59:01    compiled code at target/compiled/sales_insights/models/staging/sources.yml/source_accepted_values_raw_ord_f9b97a320d0925515b700bf59442f10f.sql
+[0m02:59:01  
+[0m02:59:01  Done. PASS=14 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=15

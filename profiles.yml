@@ -1,0 +1,12 @@
+sales_insights:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: "/workspace/data/sales-insights.duckdb"
+      schema: main
+      threads: 4
+      attach:
+        - path: "/workspace/data/domains/sales-insights/domain.duckdb"
+          alias: domain
+          read_only: true
